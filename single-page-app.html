@@ -32,6 +32,7 @@ ga('send', 'pageview');
 ga('privacyTracker.send', 'pageview');
   
 $('body').on('click', '#cookie-permission', () => {
+  console.log('clickerdeclickclick!');
   $('#cookie-permission').hide(); 
   window['ga-disable-UA-70676915-1'] = false;
   ga('send', 'pageview'); 
