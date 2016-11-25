@@ -31,7 +31,7 @@ ga('privacyTracker.set', 'forceSSL', true);
 ga('send', 'pageview');
 ga('privacyTracker.send', 'pageview');
   
-$('body').on('click', '#cookie-permission', () => {
+$('body').on('click', '#cookie-permission', (event) => {
   console.log('clickerdeclickclick!');
   $('#cookie-permission').hide(); 
   window['ga-disable-UA-70676915-1'] = false;
