@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Basic tracking code</title> 
+</head>
+<body>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-70676915-1', 'auto');
+ga('create', 'UA-70676915-2', 'auto', 'privacyTracker');
+ga('require', 'ec');
+ga('send', 'pageview');
+ga('privacyTracker.send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+  <div id="page-home" style="display: none;">
+  	<!-- Homepage -->
+  	<h1>Welcome to the future</h1>
+  	<table>
+  		<tr>
+  			<td><strong><a href="#!detail">Darth Vader</a></strong></td>
+  			<td><strong><a href="#!detail">R2-D2</a></strong></td>
+  			<td><strong><a href="#!detail">Luke Skywalker</a></strong></td>
+  		</tr>
+  	</table>
+  </div>
+
+  <div id="page-detail" style="display: none;">
+  	<h1 id="product-title">Product detail page</h1>
+  	<article id="product-description">Welcome to the product detail page</article>
+  </div>
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/page/page.js"></script>
+  <script src="/assets/client-router.js"></script>
+
+</body>
+</html>
