@@ -11,7 +11,7 @@ singlePage.Router = class {
 			const pipe = singlePage.Router.pipe; 
 			const displayPage = this.displayPage.bind(this); 
 
-			page.base('/single-page-app.html');
+			//page.base('/single-page-app.html');
 			page('home', pipe(displayPage, { pageId: 'home' })); 
 			page('detail', pipe(displayPage, { pageId: 'detail' })); 
 
