@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Basic tracking code - alternative</title> 
+</head>
+<body>
+<script src="/test/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Google Analytics -->
+
+<script>
+window['ga-disable-UA-70676915-1'] = true;
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-70676915-1', 'auto');
+ga('create', 'UA-70676915-2', 'auto', 'privacyTracker');
+
+ga('require', 'ec');
+ga('require', 'displayfeatures');
+ga('require', 'linkid');
+
+ga('set', 'anonymizeIp', true);
+ga('set', 'forceSSL', true);
+ga('set', 'userId', "12345");
+ga('privacyTracker.set', 'anonymizeIp', true);
+ga('privacyTracker.set', 'forceSSL', true);
+
+ga('send', 'pageview');
+ga('privacyTracker.send', 'pageview');
+  
+$('body').on('click', '#cookie-permission', (event) => {
+  console.log('clickerdeclickclick!');
+  $('#cookie-permission').hide(); 
+  window['ga-disable-UA-70676915-1'] = false;
+  ga('send', 'pageview'); 
+})
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+  <div id="page-home" style="display: none;">
+  	<!-- Homepage -->
+  	<h1>Welcome to the alternative future</h1>
+  	<table>
+  		<tr>
+  			<td><strong><a href="#!detail">Darth Vader</a></strong></td>
+  			<td><strong><a href="#!detail">R2-D2</a></strong></td>
+  			<td><strong><a href="#!detail">Luke Skywalker</a></strong></td>
+  		</tr>
+  	</table>
+    
+    <button id="cookie-permission">I accept cookies</button>
+  </div>
+
+  <div id="page-detail" style="display: none;">
+  	<h1 id="product-title">Product detail page</h1>
+  	<article id="product-description">Welcome to the product detail page</article>
+  </div>
+
+
+  <script src="/test/bower_components/page/page.js"></script>
+  <script src="/test/assets/client-router.js"></script>
+
+</body>
+</html>
