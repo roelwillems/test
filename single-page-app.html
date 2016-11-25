@@ -14,11 +14,16 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-70676915-1', 'auto');
 ga('create', 'UA-70676915-2', 'auto', 'privacyTracker');
+
+ga('require', 'linkid');
+ga('require', 'ec');
+
 ga('set', 'anonymizeIp', true);
 ga('set', 'forceSSL', true);
+ga('set', 'userId', 12345);
 ga('privacyTracker.set', 'anonymizeIp', true);
 ga('privacyTracker.set', 'forceSSL', true);
-ga('require', 'ec');
+
 ga('send', 'pageview');
 ga('privacyTracker.send', 'pageview');
 </script>
