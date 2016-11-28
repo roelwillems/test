@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Checkin &mdash; AH Online</title> 
+</head>
+<body>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-70676915-2', 'auto');
+ga('require', 'ec');
+ga('send', 'pageview');
+</script>
+
+<script>
+
+	// Start checkin
+	$('body').on('click', '#start-checkin-hd', (event) => {
+		ga('ec:setAction', 'checkout', {
+			'step': 1, 
+			'option': 'hd'
+		})
+	})
+
+	$('body').on('click', '#start-checkin-pup', (event) => {
+		ga('ec:setAction', 'checkout', {
+			'step': 1, 
+			'option': 'pup'
+		})
+	})
+
+	$('body').on('click', '#start-checkin-isp', (event) => {
+		ga('ec:setAction', 'checkout', {
+			'step': 1, 
+			'option': 'isp'
+		})
+	})
+
+	// HD Postcode check
+	$('body').on('click', '#hd-postcode-check', (event) => {
+	})
+
+	// PUP Winkel ophalen
+	$('body').on('click', '#pup-winkel-ophalen', (event) => {
+	})
+
+	// ISP Winkel kiezen
+	$('body').on('click', '#pup-winkel-ophalen', (event) => {
+	})
+
+	// HD Kies moment
+	$('body').on('click', '#hd-kies-moment', (event) => {
+		ga('set', 'page', '/bezorgen/moment');
+		ga('set', {
+			'blocksAvailable': 20, // blocks.available
+			'blocksOpen': 10 // blocks.open
+		})
+	})
+
+	// PUP Kies moment
+	$('body').on('click', '#pup-kies-moment', (event) => {
+		ga('set', 'page', '/ophalen/moment');
+		ga('set', {
+			'blocksAvailable': 20, // blocks.available
+			'blocksOpen': 10 // blocks.open
+		})
+	})
+
+	// ISP Kies moment
+	$('body').on('click', '#isp-kies-moment', (event) => {
+		ga('set', 'page', '/ophalen/wijzig-locatie');
+		ga('set', {
+			'blocksAvailable': 20, // blocks.available
+			'blocksOpen': 10 // blocks.open
+		})
+	})
+
+</script>
+
+	<h1>Checkin</h1>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+	<table>
+		<tr>
+			<td><button id="start-checkin-hd">Start checkin HD</button></td>
+			<td><button id="start-checkin-pup">Start checkin PUP</button></td>
+			<td><button id="start-checkin-isp">Start checkin ISP</button></td>
+		</tr>
+		<tr>
+			<td><button id="hd-postcode-check">HD Postcode check (needed?)</button></td>
+		</tr>
+		<tr>
+			<td><button id="pup-winkel-ophalen">PUP Winkel ophalen (needed?)</button></td>
+		</tr>
+		<tr>
+			<td><button id="isp-winkel-kiezen">ISP Winkel kiezen (needed?)</button></td>
+		</tr>
+		<tr>
+			<td><button id="hd-kies-moment">HD Kies moment (needed?)</button></td>
+		</tr>
+		<tr>
+			<td><button id="pup-kies-moment">PUP Kies moment (needed?)</button></td>
+		</tr>
+		<tr>
+			<td><button id="isp-kies-moment">ISP Kies moment (needed?)</button></td>
+		</tr>
+	</table>
+
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>
