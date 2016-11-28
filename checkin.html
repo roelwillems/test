@@ -21,7 +21,7 @@ ga('send', 'pageview');
 <script src="/test/bower_components/jquery/dist/jquery.min.js"></script>
 
 <script>
-
+$(document).ready(() => {
 	// Start checkin
 	$('body').on('click', '#start-checkin-hd', (event) => {
 		ga('ec:setAction', 'checkout', {
@@ -82,7 +82,7 @@ ga('send', 'pageview');
 			'blocksOpen': 10 // blocks.open
 		})
 	})
-
+})
 </script>
 
 	<h1>Checkin</h1>
