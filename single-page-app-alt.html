@@ -7,15 +7,16 @@
 <body>
 <script src="/test/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Google Analytics -->
-
 <script>
 window['ga-disable-UA-70676915-1'] = true;
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-70676915-1', 'auto');
+ga('create', 'UA-70676915-1', 'auto',{allowLinker: true});
 ga('create', 'UA-70676915-2', 'auto', 'privacyTracker');
 
 ga('require', 'ec');
 ga('require', 'displayfeatures');
+ga('require', 'linker');
+ga('linker:autoLink', ['roelwillems.github.io', 'github.com']);
 ga('require', 'linkid');
 
 ga('set', 'anonymizeIp', true);
