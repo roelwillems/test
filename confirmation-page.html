@@ -47,9 +47,8 @@ ga('ec:addProduct', {               // Provide product details in an productFiel
   'coupon': 'APPARELSALE',          // Product coupon (string).
   'quantity': 1                     // Product quantity (number).
 });
-
 ga('ec:setAction', 'purchase', {          // Transaction details are provided in an actionFieldObject.
-  'id': 'T12345',                         // (Required) Transaction id (string).
+  'id':  Math.floor((Math.random() * 1000000) + 1);,                         // (Required) Transaction id (string).
   'affiliation': 'Google Store - Online', // Affiliation (string).
   'revenue': '37.39',                     // Revenue (currency).
   'tax': '2.85',                          // Tax (currency).
@@ -58,7 +57,5 @@ ga('ec:setAction', 'purchase', {          // Transaction details are provided in
 });
   ga('send', 'event', 'dataTransport' , 'Transaction', 'Ecommerce');  // Send data using an event.
   </script>
-
-  
 </body>
 </html>
